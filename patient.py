@@ -11,5 +11,5 @@ class Patient:
         self.radius = 10
 
     def move(self):
-        self.x += random.randint(-5, 5)
-        self.y += random.randint(-5, 5)
+        self.x += 2
+        self.y += 1

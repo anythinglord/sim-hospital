@@ -1,8 +1,5 @@
-from patient import Patient
-
+from Hospital import Hospital
 import pygame
-import random
-import time
 
 # Configure Pygame
 pygame.init()
@@ -13,20 +10,7 @@ WIDTH, HEIGHT = 800, 600
 # Colours
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
-
-# Hospital`s class
-class Hospital:
-    def __init__(self):
-        self.patients = []
-
-    def admit_patient(self):
-        new_patient = Patient()
-        self.patients.append(new_patient)
-
-    def discharge_patient(self):
-        if self.patients:
-            discharged_patient = self.patients.pop()
-            print(f"Patient discharged with health: {discharged_patient.health}")
+BLUE = (1, 29, 105)
 
 # Window`s configuration
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -56,7 +40,12 @@ while running:
     for patient in hospital.patients:
         pygame.draw.circle(screen, RED, (patient.x, patient.y), patient.radius)
 
-    pygame.display.flip()
+    pygame.draw.rect(screen, BLUE,[0, 0, WIDTH, 10])
+    pygame.draw.rect(screen, BLUE,[0, HEIGHT - 10, WIDTH, 10])
+    pygame.draw.rect(screen, BLUE,[0, 0, 10, HEIGHT])
+    pygame.draw.rect(screen, BLUE,[WIDTH - 10, 0, 10, HEIGHT])
+    #pygame.display.flip()
+    pygame.display.update()
     clock.tick(60)
 
 pygame.quit()
