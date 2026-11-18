@@ -1,5 +1,6 @@
-from hospital import Hospital
 import pygame
+
+from hospital import Hospital
 
 # Configure Pygame
 pygame.init()
