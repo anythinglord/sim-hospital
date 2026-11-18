@@ -28,5 +28,5 @@ def test_main_launches_headless() -> None:
             proc.kill()
             _, err = proc.communicate()
 
-    assert rc is None, f"main.py exited early (rc={rc})"
+    assert rc is None, f"main.py exited early (rc={rc}); captured stderr:\n{err}"
     assert "Traceback" not in err, err
