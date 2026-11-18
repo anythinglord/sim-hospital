@@ -3,3 +3,9 @@ __pycache__
 myenv
 *.py[cod]
 *$py.class
+
+# SDD local artifacts
+.atl/
+
+# uv virtualenv
+.venv/

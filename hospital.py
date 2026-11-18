@@ -1,5 +1,6 @@
 from patient import Patient
 
+
 class Hospital:
     def __init__(self):
         self.patients = []
