@@ -1,4 +1,4 @@
-from Hospital import Hospital
+from hospital import Hospital
 import pygame
 
 # Configure Pygame
